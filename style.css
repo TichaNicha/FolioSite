@@ -3,7 +3,10 @@ html, body {
     width: 100%;
     margin: 0;
     background-color: #39312A;
+    font-family: 'League Spartan', sans-serif;
   }
+
+
 
 .container {
     display: grid;
@@ -18,8 +21,36 @@ html, body {
     border:1px solid black;
 }*/
 
-.item {
+.cream_area {
     background-color: #BB9B77;
     grid-area: 4 / 1 / 6 / 14;
+}
 
+.logo {
+    color: #7E766A;
+    font-family: League Spartan;
+    font-size: 2.5em;
+    padding-left: 1.5em;
+    padding-top: 0.75em;
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+.about {
+    color: #7E766A;
+    font-family: League Spartan;
+    font-weight: 600;
+    font-size: 2.5em;
+    padding-right: 1.5em;
+    padding-top: 0.75em;
+    grid-area: 1 / 11;
+}
+
+.stuff {
+    color: #7E766A;
+    font-family: League Spartan;
+    font-weight: 600;
+    font-size: 2.5em;
+    padding-right: 1.5em;
+    padding-top: 0.75em;
+    grid-area: 1 / 12;
 }
