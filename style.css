@@ -13,7 +13,7 @@ html, body {
     height:100%;
     width:100%;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 7% 15% 5% 45% 10% 18%;
+    grid-template-rows: 12% 15% 5% 50% 10% 18%;
     overflow: auto;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -69,3 +69,23 @@ html, body {
     text-align:center;
     grid-area: 3 / 5 / 4 / 9;
 }
+
+.moon {
+    grid-area: 2 / 11 / 3 / 13;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1.2s ease-in forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
