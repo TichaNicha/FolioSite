@@ -13,17 +13,15 @@ html, body {
     height:100%;
     width:100%;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 7% 30% 35% 10% auto ;
+    grid-template-rows: 7% 15% 5% 45% 10% 18%;
+    overflow: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
-
-/*.col {
-    grid-column:span 1;
-    border:1px solid black;
-}*/
 
 .cream_area {
     background-color: #BB9B77;
-    grid-area: 4 / 1 / 6 / 14;
+    grid-area: 5 / 1 / 100 / 14;
 }
 
 .logo {
@@ -53,4 +51,21 @@ html, body {
     padding-right: 1.5em;
     padding-top: 0.75em;
     grid-area: 1 / 12;
+}
+
+.name {
+    color: #E0D1BA;
+    font-family: League Spartan;
+    font-size: 13em;
+    text-align:center;
+    font-weight: 700;
+    grid-area: 2 / 5 / 2 / 9;
+}
+
+.blurb {
+    color: #7E766A;
+    font-family: League Spartan;
+    font-size: 2em;
+    text-align:center;
+    grid-area: 3 / 5 / 4 / 9;
 }
