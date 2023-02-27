@@ -1,10 +1,54 @@
 html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background-color: #39312A;
-    font-family: 'League Spartan', sans-serif;
-  }
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #39312A;
+  font-family: 'League Spartan', sans-serif;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  /* styles for screens 768px or larger */
+  .container {
+    display: grid;
+    height:100%;
+    width:100%;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 12% 15% 5% 50% 10% 18%;
+    overflow: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.cream_area {
+  background-color: #BB9B77;
+  grid-area: 5 / 1 / 20 / 7;
+}
+
+.logo {
+  color: #7E766A;
+  font-family: League Spartan;
+  font-size: 2rem;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.about {
+  color: #7E766A;
+  font-family: League Spartan;
+  font-weight: 600;
+  font-size: 2rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  grid-area: 1 / 6 / 1 / 7;
+}
+}
+
+
+@media only screen and (min-width: 769px) {
+  /* styles for screens 1024px or larger */
 
 .container {
     display: grid;
@@ -25,9 +69,9 @@ html, body {
 .logo {
     color: #7E766A;
     font-family: League Spartan;
-    font-size: 2.5em;
-    padding-left: 1.5em;
-    padding-top: 0.75em;
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+    padding-top: 0.75rem;
     grid-area: 1 / 1 / 1 / 1;
 }
 
@@ -35,9 +79,9 @@ html, body {
     color: #7E766A;
     font-family: League Spartan;
     font-weight: 600;
-    font-size: 2.5em;
-    padding-right: 1.5em;
-    padding-top: 0.75em;
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
     grid-area: 1 / 11;
 }
 
@@ -45,16 +89,16 @@ html, body {
     color: #7E766A;
     font-family: League Spartan;
     font-weight: 600;
-    font-size: 2.5em;
-    padding-right: 1.5em;
-    padding-top: 0.75em;
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
     grid-area: 1 / 12;
 }
 
 .name {
     color: #E0D1BA;
     font-family: League Spartan;
-    font-size: 13em;
+    font-size: 13rem;
     text-align:center;
     font-weight: 700;
     grid-area: 2 / 5 / 2 / 9;
@@ -63,7 +107,8 @@ html, body {
 .blurb {
     color: #7E766A;
     font-family: League Spartan;
-    font-size: 2em;
+    font-size: 2rem;
+    padding-top: 0.5rem;
     text-align:center;
     grid-area: 3 / 5 / 4 / 9;
 }
@@ -92,6 +137,11 @@ html, body {
     .bounce {
         animation: bounce 1s ease-in-out;
       }
+    
+    .bounce.reset {
+        animation: none;
+        animation: bounce 1s ease-in-out;
+    }
 
       @keyframes bounce {
         0% {
@@ -122,4 +172,7 @@ html, body {
   ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Color of the scrollbar handle when hovered */
   }
+
+
+}
 

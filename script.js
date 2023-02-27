@@ -1,3 +1,4 @@
+//animation
 const svg = document.querySelector('.moon');
 
 setTimeout(function() {
@@ -12,3 +13,15 @@ setTimeout(function() {
       });
 }, 1300 );
 
+// change to dropdown menu placeholder
+const dropdown = document.querySelector(".about");
+
+function changeText() {
+  if (window.innerWidth > 768) {
+    dropdown.textContent = "ABOUT";
+  } else {
+    dropdown.textContent = "DROPDOWN";
+  }
+}
+
+window.addEventListener("resize", changeText);
