@@ -61,7 +61,6 @@ html, body {
   color: #7E766A;
   font-family: League Spartan;
   font-size: 1.5rem;
-  padding-top: 0.5rem;
   text-align:center;
   grid-area: 4 / 1 / 4 / 7;
 }
@@ -166,14 +165,14 @@ html, body {
     font-size: 13rem;
     text-align:center;
     font-weight: 700;
-    grid-area: 2 / 5 / 2 / 9;
+    grid-area: 2 / 4 / 2 / 10;
 }
 
 .blurb {
     color: #7E766A;
     font-family: League Spartan;
     font-size: 2rem;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     text-align:center;
     grid-area: 3 / 5 / 4 / 9;
 }
