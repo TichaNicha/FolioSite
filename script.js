@@ -27,8 +27,10 @@ function changeText() {
 function changeSvgSize() {
  if (window.innerWidth > 768) {
   svg.style.width = "15.5em";
+  svg.style.height = "15.5em";
 } else {
   svg.style.width = "10.075em";
+  svg.style.height = "10.075em";
  }
 }
 

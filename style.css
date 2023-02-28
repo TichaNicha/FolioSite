@@ -10,7 +10,7 @@ html, body {
   /* styles for screens 768px or larger */
   .container {
     display: grid;
-    height:100%;
+    height:1283px;
     width:100%;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: 10% 10% 10% 5% 40% 10% 15%;
@@ -38,9 +38,10 @@ html, body {
   font-family: League Spartan;
   font-weight: 600;
   font-size: 2rem;
-  padding-right: 1.5rem;
+  text-align:right;
   padding-top: 1rem;
-  grid-area: 1 / 6 / 1 / 7;
+  padding-right: 1.5rem;
+  grid-area: 1 / 5 / 1 / 5;
   }
 
   .stuff {
@@ -66,11 +67,8 @@ html, body {
 }
 
 .moon {
-    grid-area: 1 / 3 / 2 / 5;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-area: 1 / 3 / 3 / 3;
+    align-self: center;
   }
 
 .fade-in {
