@@ -7,76 +7,56 @@ body {
   box-sizing: border-box;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content: flex-end;
+}
+
 .desktop-1 {
   background: #39312a;
-  height: 3433px;
+  height: 100%;
   position: relative;
-}
-
-.moon-yellow {
-  background: #e2b056;
-  border-radius: 50%;
-  width: 256px;
-  height: 256px;
-  position: absolute;
-  /* left: 999.68px;*/
-  right: 10%;
-  top: 211.28px;
-  transform-origin: 0 0;
-  transform: rotate(-26.5deg) scale(1, 1);
-}
-
-.moon-dark {
-  background: #39312a;
-  border-radius: 50%;
-  width: 236px;
-  height: 242px;
-  position: absolute;
-  /*left: 1078.44px;*/
-  right: 6%;
-  top: 165.3px;
-  transform-origin: 0 0;
-  transform: rotate(-26.5deg) scale(1, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
 }
 
 .nicha {
   color: #e0d1ba;
   text-align: center;
   font: 800 206px 'League Spartan', sans-serif;
-  position: absolute;
-  left: calc(50% - 291px);
-  top: 322px;
   width: 582px;
   height: 157px;
 }
+
 
 .logo {
   background: #d9d9d9;
   border-radius: 50%;
   width: 52px;
   height: 52px;
-  position: absolute;
-  left: 29px;
-  top: 15px;
+  margin-right: auto;
+  margin-left:10px;
+  margin-top: 10px;
 }
 
 .blurb-2 {
   color: #7e766a;
   text-align: center;
   font: 400 30px 'League Spartan', sans-serif;
-  position: absolute;
-  left: calc(50% - 406px);
-  top: 490px;
-  width: 812px;
+  margin-top:20px;
+  margin-bottom: 256px;
 }
 
 .gallery {
   color: #7e766a;
   text-align: center;
   font: 400 30px 'League Spartan', sans-serif;
-  position: absolute;
-  top: 28px;
-  right: 28px;
+  margin-left:10px;
+  margin-right:10px;
+  margin-top:20px;
   /* Adjust the right value as needed */
   width: 122px;
   height: 21px;
@@ -86,21 +66,29 @@ body {
   color: #7e766a;
   text-align: center;
   font: 400 30px 'League Spartan', sans-serif;
-  position: absolute;
-  top: 28px;
-  right: 190px;
+  margin-left:10px;
+  
+  margin-top:20px;
   /* Adjust the right value as needed */
   width: 122px;
   height: 21px;
 }
 
+.nicha-div {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height:80vh;
+  align-items: center;
+  justify-content: center;
+}
 
 .beige-div {
   background: #bb9b77;
   width: 100%;
   height: 664px;
-  position: absolute;
-  top: calc(50% - 911.5px);
+  display:flex;
+  flex-direction: column;
 }
 
 
@@ -119,19 +107,23 @@ body {
   border-radius: 35px;
   width: 786px;
   height: 458px;
-  margin-right: auto; /* Push project-1 to the left */
-  margin-top: 112px; /* Add spacing between project-1 and project-2 */
-  margin-left: 120px;
-  margin-bottom: -90px;
-
+  margin-left:110px;
 }
 
 .project-container {
   display: flex;
   flex-direction: column; /* Display items in a column layout */
-  position: absolute;
   top: 1500px;
   width:100%;
+}
+
+.project-row{
+  display: flex;
+  flex-direction: row;
+  margin-top:100px;
+  width:100%;
+  justify-content:space-between;
+  align-items: center;
 }
 
 
@@ -139,110 +131,66 @@ body {
   color: #39312a;
   text-align: left;
   font: 800 190px 'League Spartan', sans-serif;
-  position: absolute;
-  left:65%;
-  /* Horizontally center the element */
-  transform: translateX(-50%);
-  /* Adjust for element width */
-  top: 1013px;
   width: 1039px;
-  height: 84px;
 }
 
 .triangles2{
   top:100px;
-  position:absolute;
+}
+.triangles1{
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .blurb {
   color: #39312a;
   text-align: left;
   font: 400 36px 'League Spartan', sans-serif;
-  position: absolute;
-  left: 65%;
-  transform: translateX(-50%);
-  top: 1236px;
   width: 1044px;
   height: 84px;
 }
 
-.snake-body {
-  background: #bb9b77;
-  border-radius: 68px 0 0 68px;
-  width: calc(100% - 1113px); /* Adjust the width as needed */
-  max-width: 100%; /* Ensure the container doesn't exceed the viewport width */
-  height: 138px;
-  position: absolute;
-  left: 1113px; /* Keep the left position as needed */
-  top: 1580px;
+.links{
+display: flex;
+flex-direction: row;
+margin:47px 0;
+justify-content: center;
 }
 
-
-.snakebase-tongue {
-  background: #bb9b77;
-  border-radius: 68px;
-  width: 65px;
-  height: 19px;
-  position: absolute;
-  left: 1059px;
-  top: 1643px;
+.about-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:auto;
 }
 
-.snaket-tongue {
-  background: #bb9b77;
-  border-radius: 68px;
-  width: 38.07px;
-  height: 17.57px;
-  position: absolute;
-  left: 1041.96px;
-  top: 1626px;
-  transform-origin: 0 0;
-  transform: rotate(30.641deg) scale(1, 1);
-}
-
-.snakeb-tongue {
-  background: #bb9b77;
-  border-radius: 68px;
-  width: 38.07px;
-  height: 17.57px;
-  position: absolute;
-  left: 1075.36px;
-  top: 1658.36px;
-  transform-origin: 0 0;
-  transform: rotate(139.511deg) scale(1, 1);
-}
-
-.snake-eye {
-  background: #39312a;
-  border-radius: 42px;
-  width: 38px;
-  height: 34px;
-  position: absolute;
-  left: 1170px;
-  top: 1633px;
+.about-div-holder{
+  display:flex;
+  flex-direction: row;
+  height:100%;
+  justify-content: space-evenly;
 }
 
 .snake {
-  top:144px;
-  position:relative;
+  width:50%;
+  align-self: center;
 }
 
 .btn-holder {
   background: #e0d1ba;
   border-radius: 35px;
   width: 90%;
-  height: 114px;
+  height: 145px;
   display: flex;
-  left: 5%;
   justify-content: space-evenly;
-  position: absolute;
-  top: 854px;
+  align-self: center;
+  margin-top:38px;
 }
 
 .frame-1 {
   width: 1092px;
   height: 83px;
-  position: absolute;
   left: 154px;
   top: 869px;
 }
@@ -257,7 +205,6 @@ body {
 
 .l-brown-triangle-2 {
   border-radius: 0px;
-  position: absolute;
   left: 176.85px;
   top: 1197.14px;
   transform: translate(68.91px, -59.86px);
@@ -266,7 +213,6 @@ body {
 
 .l-brown-triangle {
   border-radius: 0px;
-  position: absolute;
   left: 272.14px;
   top: 1092.97px;
   transform: translate(16.5px, -3.11px);
@@ -275,17 +221,21 @@ body {
 
 .brown-triangle-2 {
   border-radius: 0px;
-  position: absolute;
   left: 136.92000000000002px; 
   top: 1101.8px; 
   transform: translate(21px, 9.76px);
   overflow: visible;
 }
 
+.moon{
+  margin-left:auto;
+  overflow:visible;
+  position:absolute;
+  right:0;
+}
 
 .brown-diamond {
   border-radius: 0px;
-  position: absolute;
   left: 298.72px;
   top: 1308.13px;
   transform: translate(-157.8px, -169.44px);
@@ -294,7 +244,6 @@ body {
 
 .beige-triangle {
   border-radius: 0px;
-  position: absolute;
   left: 281.88px;
   top: 2073.38px;
   transform: translate(-85.01px, 62.44px);
@@ -303,7 +252,6 @@ body {
 
 .brown-triangle {
   border-radius: 0px;
-  position: absolute;
   left: 171.59px;
   top: 2400.83px;
   transform: translate(-72.14px, -290.42px);
@@ -312,28 +260,23 @@ body {
 
 .green-gem {
   border-radius: 0px;
-  position: absolute;
-  right: 281.88px;
-  top: 2765px;
   overflow: visible;
+  margin-right:151px;
 }
 
 .footer {
   background: #282523;
   width: 100%;
   height: 210px;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .github {
   color: #e0d1ba;
   text-align: center;
   font: 400 25px 'League Spartan', sans-serif;
-  position: absolute;
-  left: calc(50% - 262px);
-  top: 3294px;
+
   width: 118px;
 }
 
@@ -341,9 +284,6 @@ body {
   color: #e0d1ba;
   text-align: center;
   font: 400 25px 'League Spartan', sans-serif;
-  position: absolute;
-  left: calc(50% - -8px);
-  top: 3294px;
   width: 117px;
 }
 
@@ -351,9 +291,6 @@ body {
   color: #e0d1ba;
   text-align: center;
   font: 400 25px 'League Spartan', sans-serif;
-  position: absolute;
-  left: calc(50% - -145px);
-  top: 3294px;
   width: 118px;
 }
 
@@ -361,9 +298,6 @@ body {
   color: #e0d1ba;
   text-align: center;
   font: 400 25px 'League Spartan', sans-serif;
-  position: absolute;
-  left: calc(50% - 124px);
-  top: 3294px;
   width: 117px;
 }
 
@@ -371,8 +305,10 @@ body {
   color: #e0d1ba;
   text-align: center;
   font: 400 25px 'League Spartan', sans-serif;
-  position: absolute;
-  left: calc(50% - 236px);
-  top: 3355px;
   width: 471px;
+  align-self: center;
+}
+
+.last-row{
+  margin-bottom:100px;
 }
