@@ -20,7 +20,7 @@ body {
   height: 256px;
   position: absolute;
   /* left: 999.68px;*/
-  right: calc(50% - 788px);
+  right: 10%;
   top: 211.28px;
   transform-origin: 0 0;
   transform: rotate(-26.5deg) scale(1, 1);
@@ -33,7 +33,7 @@ body {
   height: 242px;
   position: absolute;
   /*left: 1078.44px;*/
-  right: calc(50% - 878px);
+  right: 6%;
   top: 165.3px;
   transform-origin: 0 0;
   transform: rotate(-26.5deg) scale(1, 1);
@@ -42,7 +42,7 @@ body {
 .nicha {
   color: #e0d1ba;
   text-align: center;
-  font: 700 196px 'League Spartan', sans-serif;
+  font: 800 206px 'League Spartan', sans-serif;
   position: absolute;
   left: calc(50% - 291px);
   top: 322px;
@@ -103,24 +103,15 @@ body {
   top: calc(50% - 911.5px);
 }
 
-.project-3 {
-  background: #e0d1ba;
-  border-radius: 35px;
-  width: 786px;
-  height: 458px;
-  position: absolute;
-  left: 128px;
-  top: 2609px;
-}
 
 .project-2 {
   background: #e0d1ba;
   border-radius: 35px;
   width: 786px;
   height: 458px;
-  position: absolute;
-  left: 472px;
-  top: 2062px;
+  margin-left: auto; /* Push project-2 to the right */
+  margin-top: 112px; /* Add spacing between project-1 and project-2 */
+  margin-right: 120px;
 }
 
 .project-1 {
@@ -128,15 +119,26 @@ body {
   border-radius: 35px;
   width: 786px;
   height: 458px;
-  position: absolute;
-  left: 128px;
-  top: 1515px; 
+  margin-right: auto; /* Push project-1 to the left */
+  margin-top: 112px; /* Add spacing between project-1 and project-2 */
+  margin-left: 120px;
+  margin-bottom: -90px;
+
 }
+
+.project-container {
+  display: flex;
+  flex-direction: column; /* Display items in a column layout */
+  position: absolute;
+  top: 1500px;
+  width:100%;
+}
+
 
 .about2 {
   color: #39312a;
   text-align: left;
-  font: 800 139px 'League Spartan', sans-serif;
+  font: 800 190px 'League Spartan', sans-serif;
   position: absolute;
   left:65%;
   /* Horizontally center the element */
@@ -147,6 +149,11 @@ body {
   height: 84px;
 }
 
+.triangles2{
+  top:100px;
+  position:absolute;
+}
+
 .blurb {
   color: #39312a;
   text-align: left;
@@ -154,20 +161,22 @@ body {
   position: absolute;
   left: 65%;
   transform: translateX(-50%);
-  top: 1184px;
+  top: 1236px;
   width: 1044px;
   height: 84px;
 }
 
 .snake-body {
   background: #bb9b77;
-  border-radius: 68px;
-  width: 1221px;
+  border-radius: 68px 0 0 68px;
+  width: calc(100% - 1113px); /* Adjust the width as needed */
+  max-width: 100%; /* Ensure the container doesn't exceed the viewport width */
   height: 138px;
   position: absolute;
-  left: 1113px;
+  left: 1113px; /* Keep the left position as needed */
   top: 1580px;
 }
+
 
 .snakebase-tongue {
   background: #bb9b77;
@@ -214,8 +223,8 @@ body {
 }
 
 .snake {
-  right:10%;
-  position: absolute;
+  top:144px;
+  position:relative;
 }
 
 .btn-holder {
@@ -304,8 +313,8 @@ body {
 .green-gem {
   border-radius: 0px;
   position: absolute;
-  left: 1047px;
-  top: 2637px;
+  right: 281.88px;
+  top: 2765px;
   overflow: visible;
 }
 
