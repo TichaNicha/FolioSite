@@ -29,6 +29,8 @@ body {
   font: 800 206px 'League Spartan', sans-serif;
   width: 582px;
   height: 157px;
+  animation: fadeIn 0.9s ease-in-out;
+
 }
 
 
@@ -42,17 +44,87 @@ body {
   margin-top: 10px;
 }
 
+/* Style for the overlay */
+#overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with 40% opacity */
+  z-index: 2;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Style for the content inside the overlay */
+#overlayContent {
+  background-color: #e0d1ba;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:50%;
+  height:40%;
+  max-width:640px;
+  max-height:550px;
+  
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation keyframes for fading in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+::selection {
+  /* Change highlight background color to black */
+  background: #000;
+  /* Change highlight text color to red */
+  color: #bb9b77;
+}
+
+h2{
+  color: #39312a;
+  text-align: center;
+  font: 1000 70px 'League Spartan', sans-serif;
+
+}
+
+p{
+  color: #39312a;
+  text-align: center;
+  font: 500 40px 'League Spartan', sans-serif;
+
+}
+
 .blurb-2 {
   color: #7e766a;
   text-align: center;
   font: 400 30px 'League Spartan', sans-serif;
   margin-top:20px;
   margin-bottom: 256px;
+  animation: fadeIn 3s ease-in-out;
+
 }
 
 .gallery {
-  color: #7e766a;
-  text-align: center;
   font: 400 30px 'League Spartan', sans-serif;
   margin-left:10px;
   margin-right:10px;
@@ -62,9 +134,30 @@ body {
   height: 21px;
 }
 
-.about {
-  color: #7e766a;
+.head-btn{
+  text-decoration:none;
+  color:#7e766a;
   text-align: center;
+}
+
+.head-btn:hover{
+  color:#bb9b77 ;
+  animation: upDownAnimation 0.3s ease;
+}
+
+/* Button animation */
+@keyframes upDownAnimation {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-2px);
+  }
+}
+
+
+
+.about {
   font: 400 30px 'League Spartan', sans-serif;
   margin-left:10px;
   
@@ -72,6 +165,11 @@ body {
   /* Adjust the right value as needed */
   width: 122px;
   height: 21px;
+  border:none;
+  background:none;
+  padding:0;
+  cursor:pointer;
+
 }
 
 .nicha-div {
@@ -228,8 +326,8 @@ justify-content: center;
 }
 
 .moon{
-  margin-left:auto;
   overflow:visible;
+  top:65px;
   position:absolute;
   right:0;
 }
@@ -311,4 +409,23 @@ justify-content: center;
 
 .last-row{
   margin-bottom:100px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #282523; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bb9b77; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #E2B056; 
 }

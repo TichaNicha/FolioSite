@@ -1,43 +1,21 @@
-//animation
-const svg = document.querySelector('.moon');
+function on() {
+  document.getElementById("overlay").style.display = "block";
+  overlay.style.display = 'block';
+  overlay.style.animation = 'fadeIn 0.5s ease-in-out'; // Apply the fade-in animation
+};
 
-setTimeout(function() {
-    svg.classList.remove('fade-in');
+function off() {
+  var overlay = document.getElementById('overlay');
+  
+  // Set the fade-out animation
+  overlay.style.animation = 'fadeOut 0.5s ease-in-out';
 
-    svg.addEventListener('click', () => {
-        svg.classList.add('bounce');
-        
-        setTimeout(() => {
-          svg.classList.remove('bounce');
-        }, 1000);
-      });
-}, 1300 );
-
-// change to dropdown menu placeholder
-const dropdown = document.querySelector(".about");
-
-function changeText() {
-  if (window.innerWidth > 768) {
-    dropdown.textContent = "ABOUT";
-  } else {
-    dropdown.textContent = "DRP";
-  }
+  // Listen for the 'animationend' event
+  overlay.addEventListener('animationend', function(event) {
+    // Check if the animation that ended is the "fadeOut" animation
+    if (event.animationName === 'fadeOut') {
+      // This code will execute only when the "fadeOut" animation ends
+      document.getElementById("overlay").style.display = "none";
+    }
+  });
 }
-
-function changeSvgSize() {
- if (window.innerWidth > 768) {
-  svg.style.width = "15.5em";
-  svg.style.height = "15.5em";
-} else {
-  svg.style.width = "10.075em";
-  svg.style.height = "10.075em";
- }
-}
-
-// call resize events on page load
-changeText();
-changeSvgSize();
-
-
-window.addEventListener("resize", changeText);
-window.addEventListener("resize", changeSvgSize);
