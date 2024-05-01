@@ -1,0 +1,23 @@
+{
+  "name": "nicha-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "nicha-website",
+  "author": "StoneFreEE",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "core-js": "^3.37.0",
+    "gatsby": "^5.13.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
